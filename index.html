@@ -6,8 +6,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 	<style type="text/css">
 		* {font-family: 'Droid Sans', Tahoma, sans-serif;}
-		img {max-width:100px !important;}
-		footer {margin-top: 50px;}
+		img.ava {max-width:100px !important;}
+		m50 {margin-top: 50px;}
 	</style>
 </head>
 <body ng-controller="githubCtrl">
@@ -21,16 +21,16 @@
 			</div>
 		</div>
 		<div class="row" ng-show="user.name">
-			<div class="col-md-12"><h2>Your id is <span class="text-danger">{{finalId}}</span></h2></div>
+			<div class="col-md-12 text-center"><h2>Your id is <span class="text-danger">{{finalId}}</span></h2></div>
 		</div>
-		<div class="row" ng-show="user.name">
+		<div class="row m50" ng-show="user.name">
 			<div class="col-md-6">
-				<b>Your Avatar</b><br />
-				<img ng-src="{{data.avatar_url}}" class="img-rounded img-responsive" />
+				<i>Current Avatar</i><br />
+				<img ng-src="{{data.avatar_url}}" class="ava" />
 			</div>
 			<div class="col-md-6">
-				<b>Your Identicon</b><br />
-				<img ng-src="https://github.com/identicons/{{data.login}}.png" alt="" />
+				<i>Current Identicon</i><br />
+				<img ng-src="https://github.com/identicons/{{data.login}}.png" class="ava" alt="" />
 			</div>
 		</div>
 			
@@ -38,7 +38,7 @@
 
 	</div>
 	
-	<footer class="text-center">
+	<footer class="text-center m50">
 		<p>Built because I needed some practice with AngularJS and the Github API.</p>
 		<img src="http://forthebadge.com/images/badges/built-with-love.svg"> 
 		<img src="http://forthebadge.com/images/badges/powered-by-comcast.svg"> 
