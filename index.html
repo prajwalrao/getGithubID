@@ -7,6 +7,7 @@
 	<style type="text/css">
 		* {font-family: 'Droid Sans', Tahoma, sans-serif;}
 		img {max-width:100px !important;}
+		footer {margin-top: 50px;}
 	</style>
 </head>
 <body ng-controller="githubCtrl">
@@ -14,7 +15,7 @@
 		<h1>Get your GitHub User ID</h1>
 		<hr />
 		<div class="row text-center">
-			<div class="col-md-6">
+			<div class="col-md-6 col-md-offset-3">
 				<input type="text" class="form-control input-lg" ng-model="user.name" /> <br />
 				<button class="btn btn-lg btn-primary center-block" ng-click="post(user)">Get Id</button>
 			</div>
@@ -37,7 +38,12 @@
 
 	</div>
 	
-	<footer class="text-center"><img src="http://forthebadge.com/images/badges/built-with-love.svg"></footer>
+	<footer class="text-center">
+		<p>Built because I needed some practice with AngularJS and the Github API.</p>
+		<img src="http://forthebadge.com/images/badges/built-with-love.svg"> 
+		<img src="http://forthebadge.com/images/badges/powered-by-comcast.svg"> 
+		<img src="http://forthebadge.com/images/badges/uses-js.svg">
+	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
