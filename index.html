@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="application">
+<head>
+	<title>Get Github User ID</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		* {font-family: 'Droid Sans', Tahoma, sans-serif;}
+		img {max-width:100px !important;}
+	</style>
+</head>
+<body ng-controller="githubCtrl">
+	<div class="container center-block">
+		<h1>Get your GitHub User ID</h1>
+		<hr />
+		<div class="row">
+			<div class="col-md-12">
+				<input type="text" class="form-control input-lg" ng-model="user.name" /> <br />
+				<button class="btn btn-lg btn-primary center-block" ng-click="post(user)">Get Id</button>
+			</div>
+		</div>		
+			<h2>Your id is <span class="text-danger">{{finalId}}</span></h2>
+			<img ng-src="{{data.avatar_url}}" class="img-rounded img-responsive" />
+
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
