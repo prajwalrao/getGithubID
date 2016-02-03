@@ -13,14 +13,27 @@
 	<div class="container center-block">
 		<h1>Get your GitHub User ID</h1>
 		<hr />
-		<div class="row">
+		<div class="row text-center">
 			<div class="col-md-6">
 				<input type="text" class="form-control input-lg" ng-model="user.name" /> <br />
 				<button class="btn btn-lg btn-primary center-block" ng-click="post(user)">Get Id</button>
 			</div>
-		</div>		
-			<h2>Your id is <span class="text-danger">{{finalId}}</span></h2>
-			<img ng-src="{{data.avatar_url}}" class="img-rounded img-responsive" />
+		</div>
+		<div class="row" ng-show="user.name">
+			<div class="col-md-12"><h2>Your id is <span class="text-danger">{{finalId}}</span></h2></div>
+		</div>
+		<div class="row" ng-show="user.name">
+			<div class="col-md-6">
+				<b>Your Avatar</b><br />
+				<img ng-src="{{data.avatar_url}}" class="img-rounded img-responsive" />
+			</div>
+			<div class="col-md-6">
+				<b>Your Identicon</b><br />
+				<img ng-src="https://github.com/identicons/{{data.login}}.png" alt="" />
+			</div>
+		</div>
+			
+			
 
 	</div>
 	
