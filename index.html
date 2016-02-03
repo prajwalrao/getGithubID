@@ -12,23 +12,25 @@
 </head>
 <body ng-controller="githubCtrl">
 	<div class="container center-block">
-		<h1>Get your GitHub User ID</h1>
+		<h1 class="text-center">Get your GitHub User ID</h1>
 		<hr />
 		<div class="row text-center">
 			<div class="col-md-6 col-md-offset-3">
-				<input type="text" class="form-control input-lg" ng-model="user.name" /> <br />
+				<input type="text" class="form-control input-lg" ng-model="user.name" /> 
+				<span id="helpBlock" class="help-block">Enter your Github Username above to get your User ID.</span>
+				<br />
 				<button class="btn btn-lg btn-primary center-block" ng-click="post(user)">Get Id</button>
 			</div>
 		</div>
-		<div class="row" ng-show="user.name">
-			<div class="col-md-12 text-center"><h2>Your id is <span class="text-danger">{{finalId}}</span></h2></div>
+		<div class="row ng-cloak" ng-show="user.name">
+			<div class="col-md-12 text-center"><h1>Your Github ID is <span class="text-danger">{{finalId}}</span></h1></div>
 		</div>
 		<div class="row m50" ng-show="user.name">
-			<div class="col-md-6">
+			<div class="col-md-2 col-md-offset-4">
 				<i>Current Avatar</i><br />
 				<img ng-src="{{data.avatar_url}}" class="ava" />
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-2">
 				<i>Current Identicon</i><br />
 				<img ng-src="https://github.com/identicons/{{data.login}}.png" class="ava" alt="" />
 			</div>
@@ -39,7 +41,7 @@
 	</div>
 	
 	<footer class="text-center m50">
-		<p>Built because I needed some practice with AngularJS and the Github API.</p>
+		<p><small>Built because I needed some practice with AngularJS and the Github API.</small></p>
 		<img src="http://forthebadge.com/images/badges/built-with-love.svg"> 
 		<img src="http://forthebadge.com/images/badges/powered-by-comcast.svg"> 
 		<img src="http://forthebadge.com/images/badges/uses-js.svg">
